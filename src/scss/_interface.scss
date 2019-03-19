@@ -1,0 +1,95 @@
+body{
+    @include light();
+    color: $text-color;
+    animation: fade-in 1s linear;
+}
+.section{
+    padding: 50px 0;
+    &-title{
+        font-size: 30px;
+        @include bold();
+        text-align: center;
+        text-transform: uppercase;
+    }&__title{
+        margin-bottom: 50px;
+    }
+}
+.button-o{
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 2px solid $primary;
+    color: $primary;
+    font-size: 12px;
+    padding: 12px 17px;
+    @include bold();
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button{
+    text-transform: uppercase;
+    padding: 25px 35px;
+    border: none;
+    background-color: $primary;
+    @include bold;
+    display: inline-block;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (max-width: 576px){
+	.button-o{
+        font-size: 10px;
+        
+    }
+    .section{
+        padding: 20px;
+        &-title{
+            font-size: 24px;
+        }
+    }
+    .button_lg{
+        
+        height: 70px; 
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+}
+
+.bg-secondary {
+    background: $bg-secondary;
+}
+
+.input{
+    height: 80px;
+    padding-left: 30px;
+    border: 1px solid #dddddd;
+}
+
+
+.checkbox{
+    display: none;
+    &:checked + label:before{
+        background: $primary;
+    }&-label{
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+        &:hover{
+            cursor: pointer
+        }
+        &:before{
+            content: '';
+            height: 15px;
+            width: 15px;
+            border: 1px solid #dddddd;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+@keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
